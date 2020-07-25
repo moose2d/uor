@@ -1,0 +1,16 @@
+if hits < 25
+    overhead 'health critical'
+    cast 'Heal'
+    waitfortarget 25
+    target 'self'
+    wait 100
+elseif hits < 87
+    overhead 'health minor'
+    cast 'Heal'
+    waitfortarget 25
+    target 'self'
+    wait 100
+else 
+    overhead 'health OK'
+endif
+script 'status_monitor'

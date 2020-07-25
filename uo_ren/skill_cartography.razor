@@ -1,0 +1,25 @@
+wait 250
+# restock
+overhead 'Restocking...'
+restock 1
+wait 50
+target 'self'
+wait 250
+# use tool and select gumption
+overhead 'Selecting...'
+dclicktype '4031'
+wait 400
+gumpresponse 2
+# wait for completion of request
+overhead 'Mapping...'
+wait 4200
+overhead 'Complete'
+wait 250
+#lifttype '5356' 1
+#drop '0x400278BC' -1 -1 -1
+#wait 250
+if weight > 100
+    overhead 'throwing away maps...'
+    script 'cart_throwaway'
+endif
+loop

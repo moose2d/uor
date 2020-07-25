@@ -1,0 +1,17 @@
+overhead 'Health monitor started'
+if hits < 99
+  if poisoned
+    cast 'cure'
+    waitfortarget
+    target 'self'
+    wait 1000
+  elseif hits < 60
+    cast 'heal'
+    waitfortarget
+    target 'self'
+    wait 1000
+  else
+    script 'heal_lowHealth_quick'
+    wait 1000
+  endif
+endif

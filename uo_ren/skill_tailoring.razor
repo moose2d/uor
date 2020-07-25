@@ -1,0 +1,22 @@
+wait 205
+# d-click the sewing kit
+dclicktype '3997'
+wait 100
+waitforgump 949095101
+# make last item
+gumpresponse 21
+# wait for completion
+wait 7500
+# overweight checking
+if weight > 208
+    overhead 'Throwing away items'
+    while weight > 100
+        #throw away items
+        lifttype '7939' 1
+        drop '0x400278BC' -1 -1 -1
+        wait 500
+    endwhile
+endif
+restock 20
+target 'self'
+loop

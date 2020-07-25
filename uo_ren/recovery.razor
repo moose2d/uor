@@ -1,0 +1,16 @@
+if poisoned
+    overhead 'Poisoned'
+    cast 'Cure'
+    waitfortarget 25
+    hotkey 'target self'
+elseif hp < 78
+    overhead 'Reduced HP'
+    cast 'Heal'
+    waitfortarget 25
+    hotkey 'target self'
+elseif mana < maxmana
+    skill 'meditation'
+    overhead 'Meditating'
+else 
+    overhead 'Full recovery'
+endif

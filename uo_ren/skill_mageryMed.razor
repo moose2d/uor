@@ -1,0 +1,16 @@
+wait 250
+if mana < 30
+    skill 'Meditation'
+    while mana < 60
+    endwhile
+else
+    wait 250
+    restock 3
+    target 0x43181382
+    cast 'Invisibility'
+    waitfortarget 2
+    hotkey 'Target Self'
+endif
+wait 2000
+loop
+

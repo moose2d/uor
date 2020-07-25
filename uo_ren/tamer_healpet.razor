@@ -1,0 +1,10 @@
+hotkey 'Use Bandage (No Timer)'
+wait 150
+waitfortarget 10
+target 0x114310
+wait 250
+if insysmsg 'That being is not damaged!'
+    overhead 'Pet full health'
+endif 
+wait 4000
+loop

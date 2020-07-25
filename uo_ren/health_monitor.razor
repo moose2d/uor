@@ -1,0 +1,14 @@
+while hits < 100
+  while poisoned
+    cast 'cure'
+    waitfortarget
+    hotkey 'target self'
+    wait 1000
+  endwhile
+  if hits < 60
+    cast 'heal'
+    waitfortarget
+    hotkey 'target self'
+    wait 1000
+  endif
+endwhile

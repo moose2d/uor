@@ -1,0 +1,12 @@
+while mana < maxmana
+    overhead 'beginning meditation'
+    skill 'meditation'
+    if insysmsg 'You must wait a few moments'
+        loop
+    endif
+    while mana < maxmana
+        overhead 'still meditating'
+        wait 5000
+    endwhile
+endwhile
+script 'status_monitor'
